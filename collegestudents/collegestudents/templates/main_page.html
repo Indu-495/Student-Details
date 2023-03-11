@@ -1,0 +1,31 @@
+<body background="/static/images/university-architecture.jpg">
+  
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container-fluid bg-image">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-5">
+        <h1>Welcome to My Student Database</h1>
+        <p>
+          <a href="{% url 'student_create' %}">Create a new student</a>
+        </p>
+        <p>
+          <a href="{% url 'student_list' %}">View all students</a>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block css %}
+  <style>
+    .bg-image {
+      background-image: url('');
+      background-size: cover;
+      height: 100vh;
+    }
+  </style>
+{% endblock %}
+
+</body>
